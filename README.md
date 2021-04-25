@@ -190,6 +190,75 @@ To display content on main axis
 
 
 
-  
+# Global Styles
+
+Create a styles.js file and put all the styles into it.
+
+Import it into the other components
+
+import {globalStyles} from '../global'
+
+Use the styles with:
+style={globalStyles.container}
 
 
+### Navigation Setup with Stack Navigator
+
+Push and pop screens off the Stack
+
+https://reactnavigation.org/docs/getting-started/
+Every screen navigation props
+
+ .navigate('screen') to navigate to a screen
+.push('screen') more explicit method
+.goBack() To pop off and go to the previous screen
+
+###### Pass data from one Screen to another
+navigation.navigate('Details', item )
+
+
+### Drawer Navigation
+ 
+To create the side menu to select pages
+https://www.youtube.com/watch?v=EaNCi8o8H0A&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=24
+
+### Images
+Put Image in React Native Tag
+If it is to be reused, 
+
+*const logo = require('./logo.jpeg); // with require
+
+then plug it in...
+
+<img src={logo} />*
+
+
+### Customized Button
+
+https://www.youtube.com/watch?v=LEa48P-KtCw&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=34
+
+<TouchableOpacity onPress={onPressFunction}>
+  <View style={styles.button}>
+  <Text style={styles.buttonText}></Text>
+  </View>
+</TouchableOpacity>
+
+const styles = StyleSheet.create({
+  button: {
+    borderRadius: 8,
+    paddingVertical: 15,
+    paddingHorizontal: 10,
+    backgroundColor: '#eee',
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    fontSize: 16,
+    textAlign: 'center',
+    }
+})
+
+To use this import the function of the button with the file
+
+<FlatButton text='buttonTitle' onPress= {function}>
