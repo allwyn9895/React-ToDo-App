@@ -230,14 +230,15 @@ If it is to be reused,
 
 then plug it in...
 
-<img src={logo} />*
+<!-- <img src={logo} /> -->
 
 
 ### Customized Button
 
 https://www.youtube.com/watch?v=LEa48P-KtCw&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=34
 
-<TouchableOpacity onPress={onPressFunction}>
+
+<!-- <TouchableOpacity onPress={onPressFunction}>
   <View style={styles.button}>
   <Text style={styles.buttonText}></Text>
   </View>
@@ -257,8 +258,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     }
-})
+})-->
+
 
 To use this import the function of the button with the file
 
-<FlatButton text='buttonTitle' onPress= {function}>
+FlatButton text='buttonTitle' onPress= {function}
